@@ -5,6 +5,17 @@
   text-align: center;
 }
 
+/* New container style for the WeatherApp component */
+.WeatherAppContainer {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  min-width: 400px; /* Give the app a minimum size */
+}
+
+/* Existing styles below (optional to keep, but they are boilerplate) */
 .logo {
   height: 6em;
   padding: 1.5em;

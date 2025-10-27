@@ -1,5 +1,6 @@
 .InfoBox{
     text-align : center;
+    margin-top: 20px;
 }
 
 .cardContainer{
@@ -7,3 +8,91 @@
     justify-content: center;
 }
 
+.InfoBox .MuiCard-root {
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+    border-radius: 15px !important;
+    transition: all 0.5s ease-in-out;
+    background-color: #ffffff; /* Default background */
+}
+
+.InfoBox .MuiCardMedia-root {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Dynamic Card Styles */
+
+/* Hot Weather */
+.InfoBox.hot .MuiCard-root {
+    background: linear-gradient(135deg, #ff9a44 0%, #ff5e62 100%);
+    color: white;
+}
+
+/* Cold Weather */
+.InfoBox.cold .MuiCard-root {
+    background: linear-gradient(135deg, #a8c0ff 0%, #394aff 100%);
+    color: white;
+}
+
+/* Rain/Thunderstorm Weather */
+.InfoBox.rain .MuiCard-root {
+    background: linear-gradient(135deg, #78909c 0%, #34495e 100%);
+    color: white;
+}
+
+/* Haze/Dust/Atmosphere */
+.InfoBox.haze .MuiCard-root {
+    background: linear-gradient(135deg, #d3d9e0 0%, #b0c4de 100%);
+    color: #333;
+}
+
+/* General Text Styling for Readability */
+.InfoBox .MuiTypography-h5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    margin-bottom: 15px !important;
+    color: inherit;
+}
+
+.InfoBox .MuiTypography-body2 p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: inherit;
+}
+
+.InfoBox .MuiTypography-body2 b {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.InfoBox .MuiTypography-body2 i {
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Ensure secondary text colors are visible against dynamic backgrounds */
+.InfoBox.hot .MuiTypography-body2,
+.InfoBox.cold .MuiTypography-body2,
+.InfoBox.rain .MuiTypography-body2 {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Specific icon color for light haze background */
+.InfoBox.haze .MuiCard-root .MuiSvgIcon-root {
+    color: #555 !important;
+}
+
+/* Default icon color for dark backgrounds */
+.InfoBox.hot .MuiCard-root .MuiSvgIcon-root,
+.InfoBox.cold .MuiCard-root .MuiSvgIcon-root,
+.InfoBox.rain .MuiCard-root .MuiSvgIcon-root {
+    color: #fff !important;
+}
+
+.InfoBox .MuiSvgIcon-root {
+    font-size: 1.5rem;
+}

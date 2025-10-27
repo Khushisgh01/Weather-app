@@ -1,6 +1,7 @@
 import { useState } from "react";
 import InfoBox from "./InfoBox";
 import SearchBox from "./SearchBox";
+import "./App.css"; // Import App.css for the container style
 
 export default function WeatherApp(){
     let [weatherInfo, setWeatherInfo]=useState({
@@ -17,8 +18,10 @@ export default function WeatherApp(){
         setWeatherInfo(newInfo);
     }
     return(
-        <div style={{textAlign:"center"}}>
-            <h2> Weather App</h2>
+        <div className="WeatherAppContainer">
+            <h2 style={{ marginBottom: "30px", color: "#333", fontSize: "2rem" }}>
+                <span role="img" aria-label="sun and cloud">🌤️</span> Minimal Weather App
+            </h2>
             <SearchBox updateInfo={updateInfo}/>
             <InfoBox info={weatherInfo}/>
         </div>

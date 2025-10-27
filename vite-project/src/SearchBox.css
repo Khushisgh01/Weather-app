@@ -1,4 +1,33 @@
 .SearchBox{
     text-align: center;
     margin-bottom: 25px;
+    padding: 15px;
+    background-color: #f7f9fb;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.SearchBox form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Add space between elements */
+}
+
+/* Styling the Material UI button for a custom look */
+.SearchBox .MuiButton-contained {
+    background-color: #007bff !important; /* A primary blue color */
+    color: white !important;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    font-weight: 600;
+}
+
+.SearchBox .MuiButton-contained:hover {
+    background-color: #0056b3 !important;
+}
+
+.SearchBox p {
+    margin-top: 10px;
+    font-size: 0.9rem;
 }
